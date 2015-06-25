@@ -154,7 +154,7 @@ Sau đó tải bộ file cấu hình mẫu về bằng các lệnh sau:
 ```sh
 apt-get install -y git
 cd ~
-git clone https://github.com/ducnc/Saltstack-Kilo-U14.git
+git clone https://github.com/hocchudong/OpenStack-Kilo-SaltStack-HCD.git
 cp -R salt-note/salt /srv
 cp -R salt-note/pillar /srv
 ```

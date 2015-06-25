@@ -1,0 +1,23 @@
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto br-ex
+iface br-ex inet static
+address {{ pillar['neutron-network']['external_ip'] }}
+netmask {{ pillar['neutron-network']['netmask'] }}
+gateway {{ pillar['neutron-network']['gateway'] }}
+dns-nameservers 8.8.8.8
+
+auto eth1
+iface eth1 inet manual
+   up ifconfig $IFACE 0.0.0.0 up
+   up ip link set $IFACE promisc on
+   down ip link set $IFACE promisc off
+   down ifconfig $IFACE down
+
+auto eth0
+iface eth0 inet static
+address {{ pillar['neutron-network']['tunnel_ip'] }}
+netmask {{ pillar['neutron-network']['netmask'] }}

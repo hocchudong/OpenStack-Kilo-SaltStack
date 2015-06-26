@@ -82,10 +82,6 @@ apt-get install salt-master -y
 # saltmaster sẽ listen trên tất cả các IP
 interface: 0.0.0.0
 
-# Saltmaster sẽ đọc các file cấu hình ở /srv/salt
-file_roots:
-  base:
-    - /srv/salt
 ```
 
 <a name="2.2"></a>
@@ -155,8 +151,8 @@ Sau đó tải bộ file cấu hình mẫu về bằng các lệnh sau:
 apt-get install -y git
 cd ~
 git clone https://github.com/hocchudong/OpenStack-Kilo-SaltStack.git
-cp -R salt-note/salt /srv
-cp -R salt-note/pillar /srv
+cp -R OpenStack-Kilo-SaltStack/salt/ /srv/
+cp -R OpenStack-Kilo-SaltStack/pillar /srv/
 ```
 
 Sau khi tải mã nguồn về, bạn có thể chỉnh sửa lại IP, Password của các máy chủ OpenStack bằng cách sửa các file `/srv/pillar/config.sls` tại các mục:

@@ -40,12 +40,11 @@ password:
   - GLANCE_PASS: Welcome123
   - NOVA_PASS: Welcome123
   - NEUTRON_PASS: Welcome123
-  - CINDER_PASS: Welcome123  
+  - CINDER_PASS: Welcome123
   
 dbpassword:
   - KEYSTONE_DBPASS: Welcome1234
   - GLANCE_DBPASS: Welcome123
   - NOVA_DBPASS: Welcome123
   - NEUTRON_DBPASS: Welcome123
-  - CINDER_DBPASS: Welcome123  
-  
+  - CINDER_DBPASS: Welcome123

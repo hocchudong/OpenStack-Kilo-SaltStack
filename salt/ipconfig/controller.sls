@@ -21,5 +21,5 @@ eth1:
 config_hostname:
   cmd.run:
     - name: |
-        echo controller > /etc/hostname && echo 127.0.0.1 network >> /etc/hosts
+        echo controller > /etc/hostname && echo 127.0.0.1 controller >> /etc/hosts
         init 6

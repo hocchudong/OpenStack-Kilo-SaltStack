@@ -31,5 +31,5 @@ eth2:
 config_hostname:
   cmd.run:
     - name: |
-        echo compute1 > /etc/hostname && echo 127.0.0.1 network >> /etc/hosts
+        echo compute1 > /etc/hostname && echo 127.0.0.1 compute1 >> /etc/hosts
         init 6

@@ -91,6 +91,8 @@ SSH vào từng node và thực hiện các công việc sau:
  - Cài đặt IP cho tất cả các card mạng (nếu có thể hãy đặt giống như mô hình xây dựng hệ thống). Nếu không muốn sửa file cấu hình và đặt IP tĩnh thì có thể sử dụng lệnh `dhclient` để xin cấp IP cho card mạng. Ví dụ `dhclient eth0`
  - Sử dụng lệnh `landscape-sysinfo` để kiểm tra IP của các card mạng đã có hay chưa. Với node Controller cần 2 card, Network và Compute mỗi node cần 3 card
 
+**Lưu ý: phải đặt IP cho tất cả các card mạng trên tất cả các máy chủ rồi sau đó mới thực hiện bước tiếp theo**
+
 Các máy chủ này cài đặt gói `salt-minion` để thực thi các lệnh được cấu hình tại Master
 Để cài đặt salt-minion thực hiện các lệnh sau trên các node: Controller, Network, Compute1, Compute2
 
